@@ -1,0 +1,28 @@
+a,
+a:visited,
+a:hover {
+    color: #000; text-decoration: none;
+}
+
+.blog-column {
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid #262626;
+    word-wrap:break-word;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.blog-column h2 {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.blog-column:hover {
+    background-color: #f4f8ff;
+}

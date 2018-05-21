@@ -1,0 +1,10 @@
+.page-title-wrapper {
+    padding-left: 70px;
+    padding-right: 200px;
+}
+
+.blog-wrapper {
+    padding-left: 70px;
+    padding-right: 200px;
+    word-wrap: break-word;
+}

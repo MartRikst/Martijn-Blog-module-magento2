@@ -1,0 +1,25 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Martijn\Blog\Api\BlogRepositoryInterface"
+                type="Martijn\Blog\Model\BlogRepository"/>
+    <preference for="Martijn\Blog\Api\Data\BlogInterface"
+                type="Martijn\Blog\Model\Blog"/>
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+       <arguments>
+           <argument name="collections" xsi:type="array">
+               <item name="blog_index_listing_data_source"
+                     xsi:type="string">Martijn\Blog\Model\ResourceModel\Blog\Grid\Collection</item>
+           </argument>
+        </arguments>
+    </type>
+
+    <type name="Martijn\Blog\Model\ResourceModel\Blog\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">martijn_blog</argument>
+            <argument name="eventPrefix" xsi:type="string">martijn_blog_collection</argument>
+            <argument name="eventObject" xsi:type="string">blog_collection</argument>
+            <argument name="resourceModel" xsi:type="string">Martijn\Blog\Model\ResourceModel\Blog</argument>
+        </arguments>
+    </type>
+</config>

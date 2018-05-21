@@ -1,0 +1,12 @@
+<?php /** @var Martijn\Blog\Block\BlogPost $block */ ?>
+<?php $blogPost = $block->getBlogPost() ?>
+
+<?php if ($blogPost): ?>
+    <div class="blog-wrapper">
+        <div class="blog-content">
+            <span><?= $blogPost->getContent() ?></span>
+        </div>
+    </div>
+<?php else: ?>
+    <?= 'Blog has not been found' ?>
+<?php endif; ?>

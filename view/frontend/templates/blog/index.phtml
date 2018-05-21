@@ -1,0 +1,22 @@
+<?php /** @var Martijn\Blog\Block\Post $block */ ?>
+<div class="blog-wrapper">
+    <?php if ($blogCollection = $block->getBlogPosts()): ?>
+        <?php foreach ($blogCollection as $blog): ?>
+            <?php $id = $blog->getId() ?>
+            <a href="<?= $blog->getUrl() ?> ">
+                <div class="blog-column" >
+                    <div class="blog-title">
+                        <h2><?= $blog->getTitle() ?></h2>
+                    </div>
+                    <div class="blog-content">
+                         <p><?= $blog->getContent() ?></p>
+                    </div>
+                </div>
+            </a>
+        <?php endforeach ?>
+    <?php endif; ?>
+</div>
+
+
+
+
